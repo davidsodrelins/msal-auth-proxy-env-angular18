@@ -26,7 +26,7 @@ export class LoginComponent {
     this.authService.loading$.subscribe((loadingStatus) => {
       this.loading = loadingStatus;
     });
-  }g
+  }
 
   loginRedirect() {
     this.msalService.loginRedirect();
