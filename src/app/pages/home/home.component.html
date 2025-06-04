@@ -1,0 +1,20 @@
+<p-toast position="bottom-right" [showTransformOptions]="'translateY(100%)'" [showTransitionOptions]="'1000ms'"
+    [hideTransitionOptions]="'700ms'" [preventOpenDuplicates]="true" [showTransformOptions]="'translateX(100%)'" />
+
+<div class="flex justify-content-between tab-menu-full">
+    <p-tabMenu [activeItem]="activeItem" [model]="items">
+        <ng-template pTemplate="item" let-item>
+            <ng-container>
+                <a [routerLink]="item.route" class="p-menuitem-link">
+                    <span class="ml-2">
+                        {{ item.label}}
+                    </span>
+                </a>
+            </ng-container>
+        </ng-template>
+    </p-tabMenu>
+    
+</div>
+<div class="m-5">
+    <router-outlet></router-outlet>
+</div>

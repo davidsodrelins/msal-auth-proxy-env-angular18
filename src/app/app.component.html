@@ -1,0 +1,64 @@
+<router-outlet />
+
+<p-dialog
+  [modal]="true"
+  [closable]="false"
+  [(visible)]="toExpireVisible"
+  [style]="{ width: '30rem' }"
+>
+  <div class="flex flex-column align-items-center surface-overlay border-round">
+    <h3 class="mb-0">
+      Sua sessão está prestes a expirar. Em {{ countdown }} você será
+      desconectado
+    </h3>
+    <h3>Você ainda está ativo?</h3>
+    <div class="flex align-items-center gap-4 mt-4">
+      <button
+        pButton
+        label="Não"
+        (click)="logout()"
+        class="p-button-outlined w-8rem"
+      ></button>
+      <button
+        pButton
+        label="Sim"
+        (click)="resetExpiryBtn()"
+        class="w-8rem"
+      ></button>
+    </div>
+  </div>
+</p-dialog>
+<p-dialog
+  [modal]="true"
+  [closable]="false"
+  [(visible)]="expiredVisible"
+  [style]="{ width: '30rem' }"
+>
+  <div class="flex flex-column align-items-center surface-overlay border-round">
+    <h3 class="mb-0">
+      Sessão encerrada por inatividade. Clique abaixo para se reconectar.
+    </h3>
+    <div class="flex align-items-center gap-4 mt-4">
+      <button
+        pButton
+        label="Sair"
+        (click)="logout()"
+        class="p-button-outlined w-8rem"
+      ></button>
+      <button
+        pButton
+        label="Fazer login"
+        (click)="redirectToLogin()"
+        class="w-8rem"
+      ></button>
+    </div>
+  </div>
+</p-dialog>
+<p-toast
+  position="bottom-right"
+  [showTransformOptions]="'translateY(100%)'"
+  [showTransitionOptions]="'1000ms'"
+  [hideTransitionOptions]="'700ms'"
+  [preventOpenDuplicates]="true"
+  [showTransformOptions]="'translateX(100%)'"
+></p-toast>
