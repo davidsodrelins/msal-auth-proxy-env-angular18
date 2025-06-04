@@ -45,7 +45,7 @@ import { ImportsModule } from './imports';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
-  title = 'iht-frontend';
+  title = 'app-frontend';
 
   /**  ─── Controle de sessão ─────────────────────────── */
   expiresOn!: Date;
