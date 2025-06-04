@@ -10,6 +10,6 @@ export const environment = {
   authorizationUrl: "yoru-URL",
   clientIdMSAL: "xxxxx",
   authorityMSAL: "https://login.microsoftonline.com/xxxxx",
-  redirectUriMSAL: "https://iht.dev.accenture.com/",
+  redirectUriMSAL: "localhost_URL",
   devProxy: true,
 };
