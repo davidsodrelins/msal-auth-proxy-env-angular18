@@ -1,0 +1,45 @@
+<div class="flex flex-column justify-content-center align-items-center contain">
+  <div class="card card-control">
+    <p-button
+      class="mr-2"
+      severity="secondary"
+      (onClick)="openUsers()"
+      label="Users"
+    />
+    
+  </div>
+
+
+  
+  <div
+    class="mt-8 text-xl cursor-pointer text-primary font-bold"
+    (click)="modalTerms = true"
+  >
+    Terms
+  </div>
+</div>
+<div class="background-image"></div>
+
+<p-dialog
+  [modal]="true"
+  [closable]="false"
+  [showHeader]="false"
+  [(visible)]="modalTerms"
+  [style]="{ width: '50rem' }"
+>
+  <div class="title-container text-base mt-4 mb-3">Terms</div>
+  <div class="text-justify text-sm">
+    <p>
+      Show use terms and conditions for the Accenture Open Source
+    </p>
+   
+  </div>
+  <div class="flex justify-content-center pt-4">
+    <p-button
+      [style]="{ width: '150px' }"
+      label="Ok"
+      (click)="modalTerms = false"
+    />
+  </div>
+</p-dialog>
+<p-toast />
