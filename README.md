@@ -1,27 +1,33 @@
-# MsalAuthProxyEnvAngular18
+# msal-auth-proxy-env-angular18
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
+A clean Angular 18 boilerplate that ships with:
 
-## Development server
+- **Azure AD MSAL v3** authentication (redirect flow, interceptors, guards, broadcast service).
+- **Multiple environment files** (`dev`, `devproxy`, `homolog`, `production`) ready for CI pipelines.
+- **Local proxy configuration** (`proxy.conf.json`) to call secured back-end routes without CORS hassle.
+- **PrimeNG, PrimeFlex & PrimeIcons** pre-wired, including Dialog & Button examples.
+- **Strict mode + Stand-alone components** (no `AppModule`), following modern Angular best practices.
+- **Vite dev-server** under the hood for lightning-fast HMR builds.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## ✨ Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+| Category            | Details                                                                      |
+| ------------------- | ---------------------------------------------------------------------------- |
+| **Auth**            | MSAL 3, redirect login/logout, token-silent refresh, active-account handling |
+| **Session Timeout** | Auto-logout after 40 min of inactivity, warning dialogs at T-5 min           |
+| **Environments**    | File replacements for `devproxy`, `homolog` and `production`                 |
+| **Proxy**           | `/api/**` → configurable target (example points to Accenture Onco APIs)      |
+| **UI/UX**           | PrimeNG Dialogs + Buttons, global i18n strings (pt-BR default)               |
+| **Tooling**         | ESLint strict mode, Angular CLI cache, npm scripts shortcuts                 |
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🚀 Getting Started
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```bash
+git clone https://github.com/<org>/msal-auth-proxy-env-angular18.git
+cd msal-auth-proxy-env-angular18
+npm install
+```
