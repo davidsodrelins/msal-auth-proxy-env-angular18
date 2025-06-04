@@ -18,7 +18,7 @@ A clean Angular 18 boilerplate that ships with:
 | **Auth**            | MSAL 3, redirect login/logout, token-silent refresh, active-account handling |
 | **Session Timeout** | Auto-logout after 40 min of inactivity, warning dialogs at T-5 min           |
 | **Environments**    | File replacements for `devproxy`, `homolog` and `production`                 |
-| **Proxy**           | `/api/**` → configurable target (example points to Accenture Onco APIs)      |
+| **Proxy**           | `/api/**` → configurable target      |
 | **UI/UX**           | PrimeNG Dialogs + Buttons, global i18n strings (pt-BR default)               |
 | **Tooling**         | ESLint strict mode, Angular CLI cache, npm scripts shortcuts                 |
 
